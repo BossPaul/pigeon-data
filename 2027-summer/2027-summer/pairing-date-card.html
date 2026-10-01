@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { width:1080px; background:#EFE4CC; font-family:"PingFang TC","Noto Sans TC",sans-serif; }
+  .page { margin:28px; background:#F9F2E3; border:3px solid #B8860B; outline:1px solid #9E2B25; outline-offset:-10px; padding:44px 52px 36px; position:relative; }
+  /* 角落裝飾 */
+  .corner { position:absolute; width:46px; height:46px; }
+  .corner.tl { top:6px; left:6px; border-top:3px solid #9E2B25; border-left:3px solid #9E2B25; }
+  .corner.tr { top:6px; right:6px; border-top:3px solid #9E2B25; border-right:3px solid #9E2B25; }
+  .corner.bl { bottom:6px; left:6px; border-bottom:3px solid #9E2B25; border-left:3px solid #9E2B25; }
+  .corner.br { bottom:6px; right:6px; border-bottom:3px solid #9E2B25; border-right:3px solid #9E2B25; }
+
+  /* Header */
+  .header { background:linear-gradient(135deg,#7E1E1A,#A52A23); border-radius:14px; padding:26px 30px 22px; text-align:center; color:#FDF6E3; position:relative; overflow:hidden; }
+  .header::after { content:"🕊️"; position:absolute; left:26px; top:50%; transform:translateY(-50%); font-size:44px; opacity:.85; }
+  .header::before { content:"🕊️"; position:absolute; right:26px; top:50%; transform:translateY(-50%) scaleX(-1); font-size:44px; opacity:.85; }
+  .header .sub { font-size:24px; letter-spacing:6px; color:#E8C87A; font-weight:600; }
+  .header .main { font-size:64px; font-weight:900; letter-spacing:4px; margin-top:2px; font-family:"Songti TC","Noto Serif TC",serif; }
+  .header .main .day { color:#FFD98A; }
+  .header .lunar { font-size:22px; letter-spacing:3px; margin-top:6px; color:#F0E2C0; }
+  .seal { display:inline-block; background:#C8402F; color:#FFF; font-family:"Songti TC",serif; font-size:20px; font-weight:700; padding:2px 12px; border-radius:6px; border:2px solid #F5D58C; margin-left:10px; vertical-align:2px; }
+
+  /* 插圖 */
+  .hero { margin:26px 0 22px; }
+  .hero img { width:100%; border-radius:16px; border:3px solid #C9A227; display:block; }
+
+  /* 宜忌 */
+  .yiji { display:flex; gap:20px; }
+  .card { flex:1; border-radius:12px; padding:18px 22px; }
+  .card.yi { background:#FBF1E2; border:2px solid #C9A227; }
+  .card.ji { background:#F4EDE3; border:2px solid #CFC4AC; }
+  .card .label { font-size:26px; font-weight:800; letter-spacing:8px; text-align:center; margin-bottom:10px; }
+  .card.yi .label { color:#9E2B25; }
+  .card.ji .label { color:#8A7B62; }
+  .card .items { font-size:30px; text-align:center; line-height:1.9; }
+  .card.yi .items { color:#5B2A22; font-weight:600; }
+  .card.ji .items { color:#8A7B62; }
+  .card .note { font-size:17px; text-align:center; color:#A09176; margin-top:4px; }
+
+  /* 吉神 */
+  .god { margin-top:20px; background:linear-gradient(180deg,#FBF3DC,#F6E7C1); border:2.5px solid #B8860B; border-radius:12px; padding:16px 20px 18px; text-align:center; }
+  .god .t { font-size:22px; color:#8A6A1F; letter-spacing:6px; font-weight:700; }
+  .god .names { font-size:40px; color:#9E2B25; font-weight:900; letter-spacing:8px; margin-top:4px; font-family:"Songti TC",serif; }
+  .god .desc { font-size:19px; color:#7A6233; margin-top:8px; line-height:1.6; }
+
+  /* 為何選這天 */
+  .why { margin-top:20px; background:#FFFDF6; border:1.5px solid #D8C49A; border-radius:12px; padding:18px 26px 20px; }
+  .why .t { font-size:24px; font-weight:800; color:#9E2B25; letter-spacing:4px; margin-bottom:10px; }
+  .why .row { display:flex; gap:14px; font-size:26px; color:#4A3626; line-height:1.75; margin-top:8px; align-items:flex-start; }
+  .why .num { flex:none; width:40px; height:40px; border-radius:50%; background:#9E2B25; color:#FDF6E3; font-weight:800; display:flex; align-items:center; justify-content:center; font-size:21px; margin-top:3px; }
+  .why .row b { color:#7E1E1A; }
+
+  /* footer */
+  .footer { margin-top:22px; text-align:center; font-size:19px; color:#9A8B6C; letter-spacing:2px; border-top:1.5px dashed #C9A227; padding-top:14px; }
+  .footer b { color:#7E1E1A; }
+</style>
+</head>
+<body>
+  <div class="page">
+    <div class="corner tl"></div><div class="corner tr"></div><div class="corner bl"></div><div class="corner br"></div>
+
+    <div class="header">
+      <div class="sub">2027 夏季賽・統一配對日 <span class="seal">吉</span></div>
+      <div class="main"><span class="day">11月16日</span>（一）</div>
+      <div class="lunar">2026 丙午年・十月初八・甲午日・農民曆宜嫁娶牧養</div>
+    </div>
+
+    <div class="hero"><img src="assets/pigeon-pair.jpg" alt="pigeon pair"></div>
+
+    <div class="yiji">
+      <div class="card yi">
+        <div class="label">宜</div>
+        <div class="items">嫁娶・納采・訂盟<br>牧養・祈福・會親友</div>
+        <div class="note">牧養＝禽畜繁殖，正合賽鴿</div>
+      </div>
+      <div class="card ji">
+        <div class="label">忌</div>
+        <div class="items">上樑・開倉・蓋屋・造船</div>
+        <div class="note">與鴿舍作業無關，不影響</div>
+      </div>
+    </div>
+
+    <div class="god">
+      <div class="t">— 吉神當值 —</div>
+      <div class="names">月德・青龍・四相・普護・鳴犬</div>
+      <div class="desc">月德為當月最強吉神、青龍為黃道吉神，凶神輕微，整體大吉</div>
+    </div>
+
+    <div class="why">
+      <div class="t">為何選這天</div>
+      <div class="row"><span class="num">1</span><span>黃曆明列宜「<b>嫁娶・納采・訂盟</b>」，與配對意象直接對應</span></div>
+      <div class="row"><span class="num">2</span><span>黃曆明列宜「<b>牧養</b>」，禽畜繁殖，正合賽鴿配對</span></div>
+    </div>
+
+    <div class="footer">11/16 統一配對 → 蛋 11/23~27 → 出殼 <b>12/10~14</b> → 銜接 12/1 夏季腳環</div>
+  </div>
+</body>
+</html>
